@@ -7,7 +7,7 @@ import { Category } from '../models/category.model';
   providedIn: 'root',
 })
 export class CategoryService {
-  private url: string = 'https://qcb6tjbq-8090.brs.devtunnels.ms/pizza-shop/v1/categories';
+  private url: string = 'http://localhost:8080/pizza-shop/v1/categories';
 
   constructor(private http: HttpClient) {}
 
