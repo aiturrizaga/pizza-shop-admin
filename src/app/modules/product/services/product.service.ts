@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Pagination } from 'src/app/core/models/pagination.model';
-import { Product } from '../models/product.model';
+import { Product, ProductDTO } from '../models/product.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  private url: string = 'http://localhost:8080/pizza-shop/v1/products';
+  private url: string = environment.apiUrl + '/v1/products';
 
   constructor(private http: HttpClient) {}
 
@@ -18,11 +19,11 @@ export class ProductService {
     });
   }
 
-  create(body: Omit<Product, 'id'>) {
+  create(body: ProductDTO) {
     return this.http.post<Product>(this.url, body);
   }
 
-  update(id: number, body: Omit<Product, 'id'>) {
+  update(id: number, body: ProductDTO) {
     return this.http.put<Product>(`${this.url}/${id}`, body);
   }
 

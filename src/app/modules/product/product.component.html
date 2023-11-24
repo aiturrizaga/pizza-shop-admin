@@ -1,7 +1,7 @@
 <h3>Mis Productos</h3>
 
 <div class="d-flex justify-content-end mb-4">
-  <button type="button" class="btn btn-primary">Nuevo producto</button>
+  <button type="button" class="btn btn-primary" (click)="openSaveModal()">Nuevo producto</button>
 </div>
 
 <div>
@@ -26,7 +26,8 @@
       <td>{{product.rating}}</td>
       <td>S/ {{product.price | number:'1.2-5'}}</td>
       <td>
-        <button type="button" class="btn btn-warning" style="margin-right: 8px">Editar</button>
+        <button type="button" class="btn btn-warning" style="margin-right: 8px"
+         (click)="openSaveModal(product)">Editar</button>
         <button type="button" class="btn btn-danger">Eliminar</button>
       </td>
     </tr>

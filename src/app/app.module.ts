@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CategorySaveComponent } from './modules/category/components/category-save/category-save.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ProductSaveComponent } from './modules/product/components/product-save/product-save.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     CategoryComponent,
     ProductComponent,
     DashboardComponent,
-    CategorySaveComponent
+    CategorySaveComponent,
+    ProductSaveComponent
   ],
   imports: [
     BrowserModule,

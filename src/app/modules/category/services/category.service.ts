@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Pagination } from 'src/app/core/models/pagination.model';
 import { Category } from '../models/category.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CategoryService {
-  private url: string = 'http://localhost:8080/pizza-shop/v1/categories';
+  private url: string = environment.apiUrl + '/v1/categories';
 
   constructor(private http: HttpClient) {}
 
